@@ -1,0 +1,14 @@
+{
+  "name": "broken-news-bot",
+  "version": "1.0.0",
+  "description": "used requets python library to make http requests to newsAPI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.16.0"
+  }
+}
