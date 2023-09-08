@@ -9,6 +9,12 @@ newsapi.v2.topHeadlines({
         if (article.title.toLowerCase() !== '[removed]') {
             console.log("-------------------------------");
             console.log(`Title: ${article.title}`);
+        }
+        if (article.author !== null) {
+            console.log(`Author: ${article.author}`);
+        }
+        if (article.url.toLowerCase() !== 'https://removed.com') {
+            console.log(`Read More: ${article.url}`);
         }    
     });
     //console.log(response);
