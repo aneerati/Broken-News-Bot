@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.16.0"
+    "discord.js": "^13.16.0",
+    "newsapi": "^2.4.1"
   }
 }
