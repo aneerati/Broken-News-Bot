@@ -4,15 +4,16 @@ Broken News is a Discord Bot that delivers relevant, breaking news to discord se
 
 ## About
 
-Front End
+**Front End**:
 
 - Broken News utilizes the Discord.js node client library to make calls to the Discord API. THis allows users to interface with the Broken News Bot in their own Discord servers
 
-Back End
+**Back End**:
 
 - Broken News uses the NewsAPI node client library to make HTTP requests to fetch relevant News articles. The NewsAPI node client library simplifies the process of taking user input and fetching news articles specified by the user.
 
 ## Version Logs
 
 v0.1.0 - Created Discord Bot Client
+
 v0.2.0 - Created a function to fetch geneal news
