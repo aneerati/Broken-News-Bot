@@ -16,8 +16,11 @@ client.on("message", msg => {
         const args = msg.content.slice(prefix.length).trim().split(/ +/);
         const command = args.shift().toLowerCase();
 
-        if (command === "ping") {
-            msg.channel.send("pong")
+        if (command === "news") {
+            msg.channel.send("Sorry, no news");
+        }
+        if (command === "hello") {
+            msg.channel.send("Hello!. I can deliver you news!");
         }
     }
     
