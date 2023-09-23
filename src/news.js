@@ -1,37 +1,34 @@
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI('f4efbe81734e4fa0a278995aeac3b265');
 
-const newsArticles = [];
+function fetchNews() {
+    return new Promise((resolve, reject) => {
+        const newsArticles = [];
 
-newsapi.v2.topHeadlines({
-   // category: 'general',
-    country: 'us',
-}).then(response => {
-    response.articles.forEach((article, index) => {
-        if (article.title.toLowerCase() !== '[removed]') {
+        newsapi.v2.topHeadlines({
+            country: 'us',
+        })
+        .then(response => {
+            response.articles.forEach((article, index) => {
+                if (article.title.toLowerCase() !== '[removed]') {
+                    const articleObj = {
+                        title: article.title,
+                        author: article.author || "No Author",
+                        url: article.url.toLowerCase() !== 'https://removed.com' ? article.url : "No URL",
+                    };
 
-            const articleObj = {
-                title: article.title,
-                author: article.author || "No Author",
-                url: article.url.toLowerCase() !== 'https://removed.com' ? article.url : "No URL",
-            };
+                    newsArticles.push(articleObj);
+                }
+            });
 
-            newsArticles.push(articleObj);
-
-           // console.log("-------------------------------");
-           // console.log(`Title: ${article.title}`);
-        }
-        /*
-        if (article.author !== null) {
-            console.log(`Author: ${article.author}`);
-        }
-        if (article.url.toLowerCase() !== 'https://removed.com') {
-            console.log(`Read More: ${article.url}`);
-        }   
-        */ 
+            resolve(newsArticles); // Resolve the Promise with the newsArticles array
+        })
+        .catch(error => {
+            reject(error); // Reject the Promise if there's an error
+        });
     });
-    console.log(newsArticles);
-});
+}
 
-// Fetches the articles
-// function fetchNews()
+module.exports = {
+    fetchNews,
+};
