@@ -38,13 +38,13 @@ function fetchNews() {
             let allArticlesString = '';
 
             // Pick the first 3 articles after shuffling
-            const selectedArticles = newsArticles.slice(0, 3);
+            const selectedArticles = newsArticles.slice(0, 5);
 
             selectedArticles.forEach((article, index) => {
                 const formattedArticle = `\n\nTitle: ${article.title}\nURL: ${article.url}\n`;
                 allArticlesString += `${formattedArticle}`;
             });
-            
+
             resolve(allArticlesString); 
         })
         .catch(error => {
