@@ -2,6 +2,10 @@
 
 Broken News is a Discord Bot that delivers relevant, breaking news to discord servers. Broken News is an easy to use bot that reads text commands from users to report news that broke less than 24 hours ago. Users can also specify their requests by requesting news from a certain category, or searching for a key word in articles.
 
+## Note
+
+When adding the bot to your server, you will be prompted with a message saying the bot should be granted administrator privileges in your server. I can assure you the bot has no malicious intent and will not alter any server settings, server roles, or server users. The bot simply sends messages to the server channel. If you are still unsure, you can read the full source code in the `src` folder.
+
 ## About
 
 **Front End**:
