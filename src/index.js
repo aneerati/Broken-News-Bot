@@ -1,8 +1,8 @@
 const {Client, Intents} = require('discord.js');
-const DiscToken  = 'TOKEN';
+const DiscToken  = 'MTE0NjI2NDQ0NTE0NDc5NzMyNg.Gv1ENB.xFb61HlOLYutsMKyGjZLiuDOliAFO_jyZncciQ';
 const prefix = "$";
 
-const { fetchNews } = require('./news');
+const { fetchNews, fetchCategory } = require('./news');
 
 // Bot's permissions to interact with messages
 const client = new Client({intents: [
@@ -21,7 +21,10 @@ client.on("message", msg => {
         const args = msg.content.slice(prefix.length).trim().split(/ +/);
         const command = args.shift().toLowerCase();
 
-        if (command === "news") {
+        if (command === "help") {
+            msg.channel.send("I deliver relevant news articles direclty to your server. To get started type \"$news\" and I will send you some general news articles. For all the commands visit: https://github.com/aneerati/Broken-News-Bot#usage");
+        }
+        else if (command === "news" || command === "general") {
             fetchNews()
                 .then(allArticlesString => {
                     console.log(allArticlesString);
@@ -32,9 +35,73 @@ client.on("message", msg => {
                     msg.channel.send("Sorry, no news");
                 });
         }
-        if (command === "hello") {
-            msg.channel.send("Hello!. I can deliver you news!");
+        else if (command === "business") {
+            fetchCategory("business")
+                .then(allArticlesString => {
+                    console.log(allArticlesString);
+                    msg.channel.send(allArticlesString);
+                })
+                .catch(error => {
+                    console.error("An error occurred:", error);
+                    msg.channel.send("Sorry, no news");
+                });
         }
+        else if (command === "entertainment") {
+            fetchCategory("entertainment")
+            .then(allArticlesString => {
+                console.log(allArticlesString);
+                msg.channel.send(allArticlesString);
+            })
+            .catch(error => {
+                console.error("An error occurred:", error);
+                msg.channel.send("Sorry, no news");
+            }); 
+        }
+        else if (command === "health") {
+            fetchCategory("health")
+            .then(allArticlesString => {
+                console.log(allArticlesString);
+                msg.channel.send(allArticlesString);
+            })
+            .catch(error => {
+                console.error("An error occurred:", error);
+                msg.channel.send("Sorry, no news");
+            }); 
+        }
+        else if (command === "science") {
+            fetchCategory("science")
+            .then(allArticlesString => {
+                console.log(allArticlesString);
+                msg.channel.send(allArticlesString);
+            })
+            .catch(error => {
+                console.error("An error occurred:", error);
+                msg.channel.send("Sorry, no news");
+            }); 
+        }
+        else if (command === "sports") {
+            fetchCategory("sports")
+            .then(allArticlesString => {
+                console.log(allArticlesString);
+                msg.channel.send(allArticlesString);
+            })
+            .catch(error => {
+                console.error("An error occurred:", error);
+                msg.channel.send("Sorry, no news");
+            }); 
+        }
+        else if (command === "tech") {
+            fetchCategory("technology")
+            .then(allArticlesString => {
+                console.log(allArticlesString);
+                msg.channel.send(allArticlesString);
+            })
+            .catch(error => {
+                console.error("An error occurred:", error);
+                msg.channel.send("Sorry, no news");
+            }); 
+        }
+        
     }
     
 });
