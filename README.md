@@ -12,13 +12,21 @@ When adding the bot to your server, you will be prompted with a message saying t
 2. Add the Broken News Bot to your server using this [link](https://discord.com/api/oauth2/authorize?client_id=1146264445144797326&permissions=8&scope=bot)
 3. Interact with the bot.
 
+## Usage
+
+Broken News aims to deliver a personalized news experience to all Discord users by allowing them to specify their news requests. Users can query for news from a certain category or even search for news articles with keywords contained in them. Below are all the commands:
+
+### General
+
+- `$help`: Broken News will provide users with some guidance
+
 ## About
 
-**Front End**:
+**Front End**:  
 
 - Broken News utilizes the Discord.js node client library to make calls to the Discord API. This allows users to interface with the Broken News Bot in their own Discord servers
 
-**Back End**:
+**Back End**:  
 
 - Broken News uses the NewsAPI node client library to make HTTP requests to fetch relevant News articles. The NewsAPI node client library simplifies the process of taking user input and fetching news articles specified by the user.
 
