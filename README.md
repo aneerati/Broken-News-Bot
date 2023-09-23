@@ -14,11 +14,22 @@ When adding the bot to your server, you will be prompted with a message saying t
 
 ## Usage
 
-Broken News aims to deliver a personalized news experience to all Discord users by allowing them to specify their news requests. Users can query for news from a certain category or even search for news articles with keywords contained in them. Below are all the commands:
+Broken News aims to deliver a personalized news experience to all Discord users by allowing them to specify their news requests. Users can query for news from a certain category or even search for news articles with keywords contained in them. Users simply need to type in one of the following commands below, and Broken News will reply. Below are all the commands:
 
 ### General
 
 - `$help`: Broken News will provide users with some guidance
+
+### Categories
+
+- `$news`: Broken News responds with general U.S. news (same as `$general`)
+- `$general`: Broken News responds with general U.S. news (same as `$news`)
+- `$business`: Broken News responds with U.S. news relating to the business field
+- `$entertainment`: Broken News responds with U.S. new relating to the entertainment industry
+- `$health`: Broken News delivers health related news from U.S. sources
+- `$science`: Broken News displays U.S. science based news
+- `$sports`: Broken News delivers the latest sports news
+- `$tech`: Broken News responds with all the breaking news for technology in the U.S.
 
 ## About
 
