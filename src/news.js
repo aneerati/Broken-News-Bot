@@ -9,8 +9,11 @@ function fetchNews() {
             country: 'us',
         })
         .then(response => {
+            //
+
             response.articles.forEach((article, index) => {
                 if (article.title.toLowerCase() !== '[removed]') {
+                    
                     const articleObj = {
                         title: article.title,
                         author: article.author || "No Author",
@@ -18,13 +21,22 @@ function fetchNews() {
                     };
 
                     newsArticles.push(articleObj);
+                    
+                    
                 }
             });
 
-            resolve(newsArticles); // Resolve the Promise with the newsArticles array
+            let allArticlesString = '';
+
+            newsArticles.forEach((article, index) => {
+                const formattedArticle = `\n--------------------------------------------------\nTitle: ${article.title}\nAuthor: ${article.author}\nURL: ${article.url}\n`;
+                allArticlesString += `${formattedArticle}`;
+            });
+
+            resolve(allArticlesString); 
         })
         .catch(error => {
-            reject(error); // Reject the Promise if there's an error
+            reject(error); 
         });
     });
 }
