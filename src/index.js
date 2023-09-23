@@ -1,5 +1,5 @@
 const {Client, Intents} = require('discord.js');
-const DiscToken  = 'MTE0NjI2NDQ0NTE0NDc5NzMyNg.GB5pr1.GEEmWDYsTDLrzJwZJuCCMCqieNU2UcouFGoShY';
+const DiscToken  = 'TOKEN';
 const prefix = "$";
 
 const { fetchNews } = require('./news');

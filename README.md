@@ -6,6 +6,10 @@ Broken News is a Discord Bot that delivers relevant, breaking news to discord se
 
 When adding the bot to your server, you will be prompted with a message saying the bot should be granted administrator privileges in your server. I can assure you the bot has no malicious intent and will not alter any server settings, server roles, or server users. The bot simply sends messages to the server channel. If you are still unsure, you can read the full source code in the `src` folder.
 
+## Installation
+
+1. You must first have a Discord account and create a Discord server or be a privileged member in one. 
+
 ## About
 
 **Front End**:
