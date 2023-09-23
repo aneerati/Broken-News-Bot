@@ -9,7 +9,7 @@ When adding the bot to your server, you will be prompted with a message saying t
 ## Installation
 
 1. You must first have a Discord account and create a Discord server or be a privileged member in one.
-2. Add the Broken News Bot to your server using this link: https://discord.com/api/oauth2/authorize?client_id=1146264445144797326&permissions=8&scope=bot
+2. Add the Broken News Bot to your server using this [link](https://discord.com/api/oauth2/authorize?client_id=1146264445144797326&permissions=8&scope=bot)
 3. Interact with the bot.
 
 ## About
@@ -24,10 +24,7 @@ When adding the bot to your server, you will be prompted with a message saying t
 
 ## Version Logs
 
-v0.1.0 - Created Discord Bot Client
-
-v0.2.0 - Created a function to fetch general news
-
-v0.3.0 - Exported function call to bot client
-
+v0.1.0 - Created Discord Bot Client  
+v0.2.0 - Created a function to fetch general news  
+v0.3.0 - Exported function call to bot client  
 v1.0.0 - Broken News first release. Broken News now responds with 5 randomized news articles on general U.S. news. Broken News must be run locally.
