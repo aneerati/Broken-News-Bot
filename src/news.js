@@ -1,6 +1,14 @@
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI('f4efbe81734e4fa0a278995aeac3b265');
 
+// Shuffle an array using the Fisher-Yates algorithm
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 // Fetches General News
 function fetchNews() {
     return new Promise((resolve, reject) => {
@@ -25,13 +33,18 @@ function fetchNews() {
                 }
             });
 
+            shuffleArray(newsArticles);
+
             let allArticlesString = '';
 
-            newsArticles.forEach((article, index) => {
+            // Pick the first 3 articles after shuffling
+            const selectedArticles = newsArticles.slice(0, 3);
+
+            selectedArticles.forEach((article, index) => {
                 const formattedArticle = `\n\nTitle: ${article.title}\nURL: ${article.url}\n`;
                 allArticlesString += `${formattedArticle}`;
             });
-
+            
             resolve(allArticlesString); 
         })
         .catch(error => {
