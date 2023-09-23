@@ -31,6 +31,12 @@ Broken News aims to deliver a personalized news experience to all Discord users 
 - `$sports`: Broken News delivers the latest sports news
 - `$tech`: Broken News responds with all the breaking news for technology in the U.S.
 
+### Keyword
+
+Broken News also allows users to search for news articles containing a key word that they specify:
+
+- `q[keyword]`: Broken news delivers news containing a key word
+
 ## About
 
 **Front End**:  
