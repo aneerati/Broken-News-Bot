@@ -4,15 +4,18 @@ const prefix = "$";
 
 const { fetchNews } = require('./news');
 
+// Bot's permissions to interact with messages
 const client = new Client({intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES
 ]});
 
+// Create Bot client
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
+// Trigger for Bot to text in server
 client.on("message", msg => {
     if (msg.content.startsWith(prefix)) {
         const args = msg.content.slice(prefix.length).trim().split(/ +/);

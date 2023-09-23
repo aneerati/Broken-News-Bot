@@ -1,7 +1,7 @@
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI('f4efbe81734e4fa0a278995aeac3b265');
 
-// Fetches general news
+// Fetches General News
 function fetchNews() {
     return new Promise((resolve, reject) => {
         const newsArticles = [];
@@ -10,8 +10,6 @@ function fetchNews() {
             country: 'us',
         })
         .then(response => {
-            //
-
             response.articles.forEach((article, index) => {
                 if (article.title.toLowerCase() !== '[removed]') {
                     

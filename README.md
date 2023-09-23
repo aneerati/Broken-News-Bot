@@ -16,4 +16,6 @@ Broken News is a Discord Bot that delivers relevant, breaking news to discord se
 
 v0.1.0 - Created Discord Bot Client
 
-v0.2.0 - Created a function to fetch geneal news
+v0.2.0 - Created a function to fetch general news
+
+v0.3.0 - Exported function call to bot client
