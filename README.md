@@ -47,10 +47,4 @@ Broken News also allows users to search for news articles containing a key word 
 
 - Broken News uses the NewsAPI node client library to make HTTP requests to fetch relevant News articles. The NewsAPI node client library simplifies the process of taking user input and fetching news articles specified by the user.
 
-## Version Logs
-
-- v0.1.0 - Created Discord Bot Client  
-- v0.2.0 - Created a function to fetch general news  
-- v0.3.0 - Exported function call to bot client  
-- v1.0.0 - Broken News first release. Broken News now responds with 5 randomized news articles on general U.S. news. Broken News must be run locally.  
-- v1.1.0 - Created category fetcher
+- Broken News is hosted on a web server using express.js. This server is run on Replit's cloud environment, allowing several users to use Broken News concurrently. Additionally, to keep the Replit web server running, UptimeRobot is used to ping the server every 5 minutes, to keep the server up and running
