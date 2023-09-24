@@ -42,7 +42,7 @@ Broken News aims to deliver a personalized news experience to all Discord users 
 
 Broken News also allows users to search for news articles containing a key word that they specify:
 
-- `q[keyword]`: Broken news delivers news containing a key word
+- `$q[keyword]`: Broken news delivers news containing a key word
 
 ## About
 
