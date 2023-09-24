@@ -1,8 +1,9 @@
 const {Client, Intents} = require('discord.js');
-const DiscToken  = 'TOKEN';
+const DiscToken  = 'MTE0NjI2NDQ0NTE0NDc5NzMyNg.GdQl8R.-YRl3o02IKVXgqOqkujeoPjgu1ouEEcb5tODSQ';
 const prefix = "$";
 
 const { fetchNews, fetchCategory } = require('./news');
+const { BotHosting } = require('./server');
 
 // Bot's permissions to interact with messages
 const client = new Client({intents: [
@@ -106,4 +107,5 @@ client.on("message", msg => {
     
 });
 
+BotHosting()
 client.login(DiscToken);
