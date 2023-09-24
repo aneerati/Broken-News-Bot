@@ -2,7 +2,7 @@ const {Client, Intents} = require('discord.js');
 const DiscToken  = 'TOKEN';
 const prefix = "$";
 
-const { fetchNews, fetchCategory } = require('./news');
+const { fetchNews, fetchCategory, fetchWord } = require('./news');
 const { BotHosting } = require('./server');
 
 // Bot's permissions to interact with messages
@@ -49,14 +49,14 @@ client.on("message", msg => {
         }
         else if (command === "entertainment") {
             fetchCategory("entertainment")
-            .then(allArticlesString => {
-                console.log(allArticlesString);
-                msg.channel.send(allArticlesString);
-            })
-            .catch(error => {
-                console.error("An error occurred:", error);
-                msg.channel.send("Sorry, no news");
-            }); 
+                .then(allArticlesString => {
+                    console.log(allArticlesString);
+                    msg.channel.send(allArticlesString);
+                })
+                .catch(error => {
+                    console.error("An error occurred:", error);
+                    msg.channel.send("Sorry, no news");
+                }); 
         }
         else if (command === "health") {
             fetchCategory("health")
@@ -101,6 +101,20 @@ client.on("message", msg => {
                 console.error("An error occurred:", error);
                 msg.channel.send("Sorry, no news");
             }); 
+        }
+        else if (command.startsWith("q")) {
+            fetchWord(command.substring(1))
+            .then(allArticlesString => {
+                console.log(allArticlesString);
+                msg.channel.send(allArticlesString);
+            })
+            .catch(error => {
+                console.error("An error occurred:", error);
+                msg.channel.send("Sorry, no news");
+            }); 
+        }
+        else {
+            msg.channel.send("Sorry I didn't recognize that. Trying typing other commands");
         }
         
     }
