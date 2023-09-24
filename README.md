@@ -4,7 +4,14 @@ Broken News is a Discord Bot that delivers relevant, breaking news to discord se
 
 ## Note
 
-When adding the bot to your server, you will be prompted with a message saying the bot should be granted administrator privileges in your server. I can assure you the bot has no malicious intent and will not alter any server settings, server roles, or server users. The bot simply sends messages to the server channel. If you are still unsure, you can read the full source code in the `src` folder.
+When adding the bot to your server, you will be prompted with a message saying the bot should be granted administrator privileges in your server. Broken News has no malicious intent and will not alter any server settings, server roles, or server users. The bot simply sends messages to the server channel it receives a request from. If you are still unsure, you can read the full source code in the `src` folder.
+
+## Files
+
+- `src`: Contains are source code for Broken News
+- `src/index.js`: Contains bot client code, which is where all the bot actions take place
+- `src/news.js`: Contains newapi code, allowing the bot to make HTTP requests to receive news articles
+- `src/server.js`: Contains express code, which creates a web server for Broken News to be hosted on
 
 ## Installation
 
@@ -41,10 +48,10 @@ Broken News also allows users to search for news articles containing a key word 
 
 **Front End**:  
 
-- Broken News utilizes the Discord.js node client library to make calls to the Discord API. This allows users to interface with the Broken News Bot in their own Discord servers
+- Broken News utilizes the Discord.js node client library to make calls to the Discord API. This allows users to interface with the Broken News Bot in their own Discord servers.
 
 **Back End**:  
 
 - Broken News uses the NewsAPI node client library to make HTTP requests to fetch relevant News articles. The NewsAPI node client library simplifies the process of taking user input and fetching news articles specified by the user.
 
-- Broken News is hosted on a web server using express.js. This server is run on Replit's cloud environment, allowing several users to use Broken News concurrently. Additionally, to keep the Replit web server running, UptimeRobot is used to ping the server every 5 minutes, to keep the server up and running
+- Broken News is hosted on a web server using express.js. This server is run on Replit's cloud environment, allowing several users to use Broken News concurrently. Additionally, to keep the Replit web server running, UptimeRobot is used to ping the server every 5 minutes to keep it up and running.
