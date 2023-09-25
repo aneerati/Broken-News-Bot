@@ -23,7 +23,7 @@ client.on("message", msg => {
         const command = args.shift().toLowerCase();
 
         if (command === "help") {
-            msg.channel.send("I deliver relevant news articles direclty to your server. To get started type \"$news\" and I will send you some general news articles. For all the commands visit: https://github.com/aneerati/Broken-News-Bot#usage");
+            msg.channel.send("I deliver relevant news articles directly to your server. To get started type \"$news\" and I will send you some general news articles. For all the commands visit: https://github.com/aneerati/Broken-News-Bot#usage");
         }
         else if (command === "news" || command === "general") {
             fetchNews()
