@@ -1,5 +1,6 @@
 const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('f4efbe81734e4fa0a278995aeac3b265');
+const NewsToken = 'TOKEN';
+const newsapi = new NewsAPI(NewsToken);
 
 // Shuffle an array using the Fisher-Yates algorithm
 function shuffleArray(array) {
