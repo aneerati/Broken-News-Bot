@@ -1,8 +1,15 @@
-const { fetchNews } = require('./news');
+const { fetchNews, fetchWord } = require('./news');
 
-fetchNews()
+const keyword = "biden";
+
+fetchWord(keyword)
     .then(allArticlesString => {
-        console.log(allArticlesString);
+        if (allArticlesString) {
+            console.log(allArticlesString);
+        }
+        else {
+            console.log(`Sorry, I could not find any articles with \"${keyword}\". Try searching for other words.`);
+        }
     })
     .catch(error => {
         console.error("An error occurred:", error);

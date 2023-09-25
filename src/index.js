@@ -1,5 +1,5 @@
 const {Client, Intents} = require('discord.js');
-const DiscToken  = 'TOKEN';
+const DiscToken  = 'MTE0NjI2NDQ0NTE0NDc5NzMyNg.G7oO9l.lOFKV1-mrS4EFucFgbuLBaI-g2n0EFBjYvOTuk';
 const prefix = "$";
 
 const { fetchNews, fetchCategory, fetchWord } = require('./news');
@@ -105,8 +105,16 @@ client.on("message", msg => {
         else if (command.startsWith("q")) {
             fetchWord(command.substring(1))
             .then(allArticlesString => {
-                console.log(allArticlesString);
-                msg.channel.send(allArticlesString);
+                if (allArticlesString) {
+                    console.log(allArticlesString);
+                    msg.channel.send(allArticlesString); 
+                }
+                else {
+                    const response = `Sorry, I could not find any articles with \"${command.substring(1)}\". Try searching for other words.`;
+                    console.log(response);
+                    msg.channel.send(response);
+                }
+                
             })
             .catch(error => {
                 console.error("An error occurred:", error);
